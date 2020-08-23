@@ -3,11 +3,12 @@
   z-index: 99;
   height: 100vh;
   width: 100vw;
-  background-color: var(--yellow);
+  background: var(--main-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px;
+  color: white;
   top: 0;
 }
 

@@ -11,6 +11,7 @@
 @import "components/icon-row.css";
 @import "components/alt-screen-header.css";
 @import "components/no-mobile.css";
+@import "components/big-profile.css";
 
 /* Screens */
 @import "screens/login.css";
@@ -20,11 +21,23 @@
 @import "screens/settings.css";
 @import "screens/chat.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #2e363e;
-  font-family: "Open Sans", sans-serif;
-  height: 1000vh;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
   padding-top: 25px;
+  position: relative;
+}
+
+.body-gradient {
+  width: 100%;
+  height: 100%;
+  background: var(--main-gradient);
 }
 
 .main-screen {
@@ -32,52 +45,56 @@ body {
 }
 
 .welcome-header {
-  margin: 90px 0px;
+  margin-bottom: 100px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
+}
+
+.welcome-header i {
+  margin-top: 170px;
 }
 
 .welcome-header__title {
-  margin-bottom: 20px;
-  font-size: 25px;
+  margin-top: 30px;
+  font-size: 30px;
 }
 
 .welcome-header__text {
+  margin: 10px 0;
   width: 60%;
-  opacity: 0.7;
+  font-weight: 400;
 }
 
 #login-form {
   display: flex;
   flex-direction: column;
-  margin: 0px 30px;
+  justify-content: center;
+  margin: 0 80px;
 }
 
 #login-form input {
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--yellow);
   padding: 15px 0px;
   font-size: 18px;
   margin-bottom: 25px;
   transition: border-color 0.3s ease-in-out;
+  background-color: transparent;
 }
 
 #login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: border-color 0.3s ease-in-out;
 }
 
 #login-form input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-#login-form input:focus {
-  border-color: var(--yellow);
+  color: white;
+  opacity: 0.7;
 }
 
 #login-form input[type="submit"] {
+  color: rgb(255, 121, 97);
   background-color: var(--yellow);
   cursor: pointer;
   padding: 20px 0px;
@@ -87,6 +104,6 @@ body {
 #login-form a {
   text-align: center;
   text-decoration: none;
-  color: inherit;
+  color: white;
   font-size: 13px;
 }

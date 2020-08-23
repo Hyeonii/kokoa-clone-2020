@@ -2,39 +2,49 @@
   margin-top: 35px;
 }
 
-.more-suggestions {
-  margin-top: 50px;
+.my-profile-editor {
+  text-align: right;
+  opacity: 0.6;
+}
+
+.more-screen .big-profile__title {
+  margin-top: -15px;
+}
+
+.todays-hot {
+  margin-top: 30px;
   border-top: var(--main-border);
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
-.more-suggestions__title {
-  margin-bottom: 30px;
+.todays-hot__title {
+  display: flex;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.more-suggestions__icons {
+.todays-hot__title i {
+  margin-right: 10px;
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.todays-hot__article {
   display: flex;
 }
 
-.more-suggestions__icon {
-  margin-right: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.more-suggestions__icon-image {
-  width: 60px;
-  height: 60px;
-  background-color: var(--yellow);
+.todays-hot__article img {
+  width: 160px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
 }
 
-.more-suggestions__icon-image i {
-  font-size: 30px;
-  color: white;
+.todays-hot__article-text {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.todays-hot__article-text h1 {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 600;
 }

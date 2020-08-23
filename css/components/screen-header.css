@@ -1,4 +1,5 @@
 .screen-header {
+  background-color: var(--coral);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,12 +8,14 @@
 }
 
 .screen-header__title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
+  color: white;
 }
 
 .screen-header__icons {
   position: relative;
+  color: white;
 }
 
 .screen-header__icons span {
@@ -33,7 +36,7 @@
 }
 
 .screen-header__notification {
-  background-color: tomato;
+  background-color: var(--yellow);
   width: 6px;
   height: 6px;
   border-radius: 2.5px;
@@ -43,4 +46,8 @@
   position: absolute;
   left: 73px;
   bottom: 20px;
+}
+
+.more-cog {
+  left: 123px;
 }

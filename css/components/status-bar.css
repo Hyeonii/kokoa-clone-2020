@@ -3,29 +3,17 @@
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 5px 3px;
-  background-color: white;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: var(--coral);
+  color: white;
+  position: absolute;
 }
 
-.status-bar__column {
-  width: 33%;
-}
-
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.status-bar__column i:nth-child(2) {
+  margin: 0 5px;
 }
 
 .status-bar__column .fa-battery-empty {
-  margin: 0px 5px;
-  color: rgba(192, 49, 49, 0.856);
+  color: var(--yellow);
 }

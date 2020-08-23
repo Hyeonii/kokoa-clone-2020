@@ -1,5 +1,7 @@
 :root {
-  --yellow: #fae100;
+  --yellow: #f6ee9f;
+  --coral: rgb(255, 121, 97);
   --horizontal-space: 25px;
   --main-border: 1px solid rgba(0, 0, 0, 0.2);
+  --main-gradient: linear-gradient(30deg, var(--coral), #ffb898, #f6ee9f);
 }

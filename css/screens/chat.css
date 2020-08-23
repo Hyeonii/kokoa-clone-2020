@@ -1,6 +1,15 @@
 #chat-screen {
-  background-color: #abc1d1;
-  height: 500vh;
+  background: var(--main-gradient);
+  height: 100vh;
+  position: relative;
+}
+
+#chat-screen .status-bar {
+  background-color: transparent;
+}
+
+#chat-screen .fa-battery-empty {
+  color: var(--coral);
 }
 
 #chat-screen .alt-header,
@@ -9,10 +18,11 @@
   position: fixed;
   width: 100%;
   box-sizing: border-box;
-  background-color: #abc1d1;
+  position: absolute;
 }
 
 #chat-screen .alt-header {
+  color: rgb(73, 73, 73);
   top: 10px;
   z-index: 1;
 }
@@ -32,21 +42,24 @@
   }
 }
 
+.message-row__animation {
+  animation: fadeIn 0.5s linear;
+}
+
 .main-chat {
-  margin-top: 155px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fadeIn 0.5s linear;
 }
 
 .chat__timestamp {
   color: white;
-  background-color: #92a4b2;
-  padding: 10px;
+  background-color: var(--coral);
+  padding: 10px 20px;
   font-size: 14px;
   border-radius: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .message-row {
@@ -58,7 +71,7 @@
 .message-row img {
   width: 50px;
   height: 50px;
-  border-radius: 40%;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
@@ -78,7 +91,16 @@
   font-size: 18px;
   border-radius: 15px;
   border-top-left-radius: 0px;
-  margin-right: 5px;
+}
+
+.message-row--own img {
+  width: 200px;
+  height: 140px;
+  border-radius: 10%;
+}
+
+.message__time {
+  margin: 0 5px;
 }
 
 .message__author,
@@ -118,15 +140,12 @@
 
 .reply .reply__column:first-child {
   width: 10%;
+  color: var(--coral);
 }
 
 .reply .reply__column:last-child {
   width: 90%;
   position: relative;
-}
-
-.reply i {
-  opacity: 0.5;
 }
 
 .reply input {
@@ -140,13 +159,14 @@
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
-  right: -3px;
+  right: -17px;
   top: 5px;
 }
 
 .reply__column:last-child > i {
-  right: 40px;
+  right: 30px;
   top: 15px;
+  opacity: 0.5;
 }
 
 .reply__column button {
@@ -157,13 +177,18 @@
   border-radius: 50%;
 }
 
+.reply__column input:focus {
+  opacity: 0.9;
+}
+
 .reply__column button i {
-  opacity: 1;
+  color: var(--coral);
 }
 
 .reply__column button:focus,
+.reply__column input:focus,
 .reply__column button:active {
-  outline: none;
+  border-style: none;
 }
 
 .reply .reply__column:first-child,
